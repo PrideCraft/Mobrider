@@ -1,0 +1,6 @@
+name: Mobrider
+version: '${project.version}'
+main: me.notarin.mobrider.Mobrider
+api-version: 1.19
+authors: [ Notarin ]
+description: MOOBRIIDAAAAAAAHHHHHH
