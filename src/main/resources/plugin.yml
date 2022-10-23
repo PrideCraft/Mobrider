@@ -4,3 +4,7 @@ main: me.notarin.mobrider.Mobrider
 api-version: 1.19
 authors: [ Notarin ]
 description: MOOBRIIDAAAAAAAHHHHHH
+commands:
+  togglemobriding:
+    aliases: ['tglmr']
+    description: "toggles mobriding off and on"
