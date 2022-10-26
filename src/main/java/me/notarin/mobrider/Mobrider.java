@@ -4,7 +4,6 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -37,7 +36,10 @@ public final class Mobrider extends JavaPlugin {
         public void onInteract(PlayerInteractEntityEvent e) {
             Player p = e.getPlayer();
             Entity en = e.getRightClicked();
-            if(!(en instanceof ArmorStand) && !(en instanceof Player) && !(toggles.contains(String.valueOf(p)))) {
+            List<String> banned_entities = new ArrayList<>();
+            banned_entities.add("PLAYER");
+            banned_entities.add("ARMOR_STAND");
+            if(!(banned_entities.contains(String.valueOf(en.getType()))) && !(toggles.contains(String.valueOf(p)))) {
                 en.addPassenger(p);
             }
         }
